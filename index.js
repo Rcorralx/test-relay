@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
-const port = 5050
+const port = 3000
 const Gun = require('gun')
+
+app.get('/', (req, res) => {
+  res.send('Hello World!')
+})
 
 
 app.use(Gun.serve)
